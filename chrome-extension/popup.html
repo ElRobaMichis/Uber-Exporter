@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats Data Extractor</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Uber Eats Data Extractor</h1>
+        <p class="subtitle">Extract restaurant data and export to XLSX</p>
+        
+        <div class="button-group">
+            <button id="extractVisible" class="primary-button">
+                Extract Visible Restaurants
+            </button>
+            <button id="extractAll" class="secondary-button">
+                Extract All (Auto-scroll)
+            </button>
+        </div>
+        
+        <div id="status" class="status"></div>
+        
+        <div id="results" class="results" style="display: none;">
+            <h3>Extraction Results</h3>
+            <p>Found <span id="count">0</span> restaurants</p>
+            <button id="downloadExcel" class="download-button">
+                Download XLSX File
+            </button>
+        </div>
+        
+        <div class="footer">
+            <p class="note">Make sure you're on an Uber Eats page before extracting data.</p>
+        </div>
+    </div>
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
